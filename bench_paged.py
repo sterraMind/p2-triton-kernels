@@ -1,5 +1,5 @@
-import sys, time, torch
-sys.path.insert(0, "p2-triton")
+import os, sys, time, torch
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from paged_attn import paged_decode, reference, make_batch
 
 def bench(fn, iters=100, warmup=20):
